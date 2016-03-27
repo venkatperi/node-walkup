@@ -1,6 +1,6 @@
 should = require( "should" )
 assert = require( "assert" )
-walkup = require '..'
+walkup = require '../index'
 path = require "path"
 
 fixturesDir = path.join __dirname, "fixtures"
