@@ -10,20 +10,10 @@ WalkUp uses the `glob` library to do it's pattern matching.
 Install with npm
 
 ```
-npm i node-walkup
+npm install node-walkup
 ```
 
-## walkup(pattern, options, cb)
-
-* `pattern` `{String}` Pattern to be matched
-* `options` `{Object}`
-* `cb` `{Function(err, matches)}`
-  * `err` `{Error | null}`
-  * `matches` `{Array<Object>}` where `{Object}`
-    * `dir`: `{String}` dir where match was found
-    * `files`: `Array<String>` filenames found matching the pattern in that dir
-
-Perform an asynchronous glob search. If no matching files are found, then an empty array is returned.
+## Example
 
 ```javascript
 var walkup = require("node-walkup")
@@ -46,6 +36,19 @@ walkup("*.json", options, function (err, matches) {
   //  ]
 })
 ```
+
+
+## walkup(pattern, options, cb)
+
+* `pattern` `{String}` Pattern to be matched
+* `options` `{Object}`
+* `cb` `{Function(err, matches)}`
+  * `err` `{Error | null}`
+  * `matches` `{Array<Object>}` where `{Object}`
+    * `dir`: `{String}` dir where match was found
+    * `files`: `Array<String>` filenames found matching the pattern in that dir
+
+Perform an asynchronous glob search. If no matching files are found, then an empty array is returned.
 
 ## Class: walkup.WalkUp
 
