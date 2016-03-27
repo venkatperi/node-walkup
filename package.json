@@ -1,6 +1,6 @@
 {
-  "name": "node-log",
-  "version": "0.1.0",
+  "name": "node-walkup",
+  "version": "1.0.0",
   "preferGlobal": false,
   "description": "Wrapper around winstonjs",
   "dependencies": {
