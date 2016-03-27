@@ -1,0 +1,23 @@
+{
+  "name": "node-log",
+  "version": "0.1.0",
+  "preferGlobal": false,
+  "description": "Wrapper around winstonjs",
+  "dependencies": {
+    "glob": "^7.0.3",
+    "q": "^1.4.1",
+    "underscore": "^1.8.3"
+  },
+  "engines": {
+    "node": ">= 0.6.0",
+    "npm": ">= 1.0.0"
+  },
+  "bundleDependencies": [],
+  "main": "lib/Log.coffee",
+  "devDependencies": {
+    "mocha": "^2.0.1",
+    "should": "^4.4.1"
+  },
+  "author": "Venkat Peri <venkatperi@gmail.com> (http://www.vperi.com/)",
+  "license": "MIT"
+}
