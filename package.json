@@ -9,6 +9,7 @@
   "description": "Walk up dir tree and glob at each level",
   "dependencies": {
     "glob": "^7.0.3",
+    "q": "^1.4.1",
     "underscore": "^1.8.3"
   },
   "engines": {
@@ -16,7 +17,7 @@
     "npm": ">= 1.0.0"
   },
   "bundleDependencies": [],
-  "main": "dist/index.js",
+  "main": "dist/index",
   "scripts": {
     "prepublish": "grunt",
     "test": "mocha"

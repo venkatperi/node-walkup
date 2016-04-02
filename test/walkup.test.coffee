@@ -24,6 +24,15 @@ describe "walkup", ->
       assert.deepEqual res, require path.join( expectedDir, "#{pattern}.json" )
       done()
 
+  it "resolves a promise", ( done ) ->
+    pattern = "10108158-0ca9-4570-b451-804777df1eef"
+    walkup( pattern, cwd : dir11 )
+    .then ( res ) ->
+      res = fixPaths res
+      assert.deepEqual res, require path.join( expectedDir, "#{pattern}.json" )
+      done()
+    .fail done
+
 
   it "another pattern", ( done ) ->
     pattern = "????????-????-????-????-????????????"
@@ -37,13 +46,13 @@ describe "walkup", ->
 
   it "limit to two levels", ( done ) ->
     pattern = "*.txt"
-    walkup pattern, cwd : dir11, maxResults: 2, ( err, res ) ->
+    walkup pattern, cwd : dir11, maxResults : 2, ( err, res ) ->
       res.length.should.equal 2
       done()
 
   it "limit to three levels", ( done ) ->
     pattern = "*.txt"
-    walkup pattern, cwd : dir11, maxResults: 3, ( err, res ) ->
+    walkup pattern, cwd : dir11, maxResults : 3, ( err, res ) ->
       res.length.should.equal 3
       done()
 
@@ -61,15 +70,15 @@ describe "walkup", ->
 
   it "match event", ( done ) ->
     pattern = "*.txt"
-    w = new walkup.WalkUp pattern, maxResults: 1, cwd : dir11
-    w.on "match", (match) ->
+    w = new walkup.WalkUp pattern, maxResults : 1, cwd : dir11
+    w.on "match", ( match ) ->
       assert.notEqual match.dir, undefined
       done()
 
   it "end event", ( done ) ->
     pattern = "*.txt"
     w = new walkup.WalkUp pattern, cwd : dir11
-    w.on "end", (matches) ->
+    w.on "end", ( matches ) ->
       done()
 
 

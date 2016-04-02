@@ -4,7 +4,8 @@
 WalkUp = require "./lib/WalkUp"
 
 walkup = ( params, opts, cb ) ->
-  new WalkUp params, opts, cb
+  w = new WalkUp params, opts, cb
+  w.done
 
 walkup.WalkUp = WalkUp
 
