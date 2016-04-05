@@ -57,3 +57,4 @@ class WalkUp extends EventEmitter
     @defer.reject new Error "aborted by user"
 
 module.exports = WalkUp
+
