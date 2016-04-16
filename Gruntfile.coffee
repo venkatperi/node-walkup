@@ -25,12 +25,7 @@ module.exports = ( grunt ) ->
         dest : "dist"
         ext : '.js'
 
-    watch :
-      dist :
-        tasks : [ "coffee:dist" ]
-        files : [ "lib/**/*coffee", "*.coffee" ]
-
-  for t in [ "contrib-watch", "contrib-coffee", "contrib-clean" ]
+  for t in [ "contrib-coffee", "contrib-clean" ]
     grunt.loadNpmTasks "grunt-#{t}"
 
   grunt.registerTask "default", ["clean:dist","coffee:dist"]
