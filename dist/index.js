@@ -4,7 +4,7 @@
  */
 var WalkUp, walkup;
 
-WalkUp = require("./lib/WalkUp");
+WalkUp = require("./lib/walkup");
 
 walkup = function(params, opts, cb) {
   var w;
