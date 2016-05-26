@@ -4,7 +4,7 @@
     "type": "git",
     "url": "https://github.com/venkatperi/node-walkup.git"
   },
-  "version": "0.0.0-semantically-released",
+  "version": "1.0.5",
   "preferGlobal": false,
   "description": "Walk up dir tree and glob at each level",
   "dependencies": {
@@ -20,16 +20,14 @@
   "main": "dist/index",
   "scripts": {
     "prepublish": "grunt",
-    "test": "mocha",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "test": "mocha"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-coffee": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",
-    "should": "^8.3.0",
-    "semantic-release": "^4.3.5"
+    "should": "^8.3.0"
   },
   "author": "Venkat Peri <venkatperi@gmail.com> (http://www.vperi.com/)",
   "license": "MIT"
